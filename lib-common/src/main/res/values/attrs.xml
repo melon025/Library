@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--昼夜模式主色调-->
+    <attr name="dayNightBackground" format="color|reference" />
+    <attr name="dayNightOneTextColor" format="color|reference" />
+    <attr name="dayNightTwoTextColor" format="color|reference" />
+    <attr name="dayNightThreeTextColor" format="color|reference" />
+    <attr name="dayNightBackgroundDrawable" format="color|reference" />
+
+    <declare-styleable name="DayNightMode">
+        <attr name="dayNightBackgroundAttr" format="string|reference" /><!--切换背景属性-->
+        <attr name="dayNightOneTextColorAttr" format="string|reference" /><!--切换一级字体颜色属性-->
+        <attr name="dayNightTwoTextColorAttr" format="string|reference" /><!--切换二级字体颜色属性-->
+        <attr name="dayNightThreeTextColorAttr" format="string|reference" /><!--切换三级字体颜色属性-->
+        <attr name="dayNightBackgroundDrawableAttr" format="string|reference" /><!--切换背景图片属性-->
+    </declare-styleable>
+
+
+    <!--圆角头像-->
+    <declare-styleable name="SelectableRoundedImageView">
+        <attr name="sriv_left_top_corner_radius" format="dimension" />
+        <attr name="sriv_right_top_corner_radius" format="dimension" />
+        <attr name="sriv_left_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_right_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_border_width" format="dimension" />
+        <attr name="sriv_border_color" format="color" />
+        <attr name="sriv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+    <!--Zoombutton-->
+    <declare-styleable name="ZoomButton">
+        <attr name="scale" format="float" />
+    </declare-styleable>
+
+
+    <!--流式布局-->
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--评分等级-->
+    <declare-styleable name="RatingBarView">
+
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starMargin" format="dimension" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+    </declare-styleable>
+    <!--icalendar-->
+    <declare-styleable name="MaterialCalendarView">
+
+        <attr name="mcv_dateTextAppearance" format="reference" />
+        <attr name="mcv_weekDayTextAppearance" format="reference" />
+        <attr name="mcv_headerTextAppearance" format="reference" />
+
+        <attr name="mcv_arrowColor" format="color" />
+        <attr name="mcv_leftArrowMask" format="reference" />
+        <attr name="mcv_rightArrowMask" format="reference" />
+        <attr name="mcv_selectionColor" format="color" />
+
+        <attr name="mcv_showOtherDates" format="integer">
+            <flag name="none" value="0" />
+            <flag name="other_months" value="1" />
+            <flag name="out_of_range" value="2" />
+            <flag name="decorated_disabled" value="4" />
+            <flag name="defaults" value="4" />
+            <flag name="all" value="7" />
+        </attr>
+
+        <attr name="mcv_allowClickDaysOutsideCurrentMonth" format="boolean" />
+        <attr name="mcv_showDayView" format="boolean" />
+        <attr name="mcv_showWeekView" format="boolean" />
+        <attr name="mcv_showLunar" format="boolean" />
+        <attr name="mcv_showTopBar" format="boolean" />
+        <attr name="mcv_weekDayLabels" format="reference" />
+        <attr name="mcv_monthLabels" format="reference" />
+
+        <!-- We want to accept match_parent but not wrap_content. It'd be better if we could
+        point to the real match_parent constant, but since it hasn't change since API 1,
+        I think it's safe to hardcode it-->
+        <attr name="mcv_tileSize" format="dimension">
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileHeight" format="dimension">
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileWidth" format="dimension">
+            <enum name="match_parent" value="-1" />
+        </attr>
+
+        <attr name="mcv_firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1" />
+            <enum name="monday" value="2" />
+            <enum name="tuesday" value="3" />
+            <enum name="wednesday" value="4" />
+            <enum name="thursday" value="5" />
+            <enum name="friday" value="6" />
+            <enum name="saturday" value="7" />
+        </attr>
+
+        <attr name="mcv_calendarMode" format="enum">
+            <enum name="month" value="0" />
+            <enum name="week" value="1" />
+        </attr>
+
+        <attr name="mcv_titleAnimationOrientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandTextView">
+        <attr name="titleText" format="reference|string" />
+        <attr name="contentText" format="reference|string" />
+        <attr name="foldHint" format="reference|string" />
+        <attr name="expandHint" format="reference|string" />
+        <attr name="textTitleColor" format="reference|color" />
+        <attr name="textContentColor" format="reference|color" />
+        <attr name="textHintColor" format="reference|color" />
+        <attr name="indicateImage" format="reference" />
+        <attr name="minVisibleLines" format="integer" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="contentTextSize" format="dimension" />
+        <attr name="hintTextSize" format="dimension" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EditText">
+        <attr name="drawable_hide" format="integer" />
+        <attr name="drawable_show" format="integer" />
+        <attr name="drawable_visible" format="boolean"></attr>
+        <attr name="tint_color" format="color" />
+        <attr name="additionalTouchTargetSize" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="IRecyclerView">
+        <attr name="refreshHeaderLayout" format="reference" />
+        <attr name="loadMoreFooterLayout" format="reference" />
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+        <attr name="refreshFinalMoveOffset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalExpandMenu">
+        <attr name="back_color" format="color" />
+        <attr name="stroke_size" format="dimension" />
+        <attr name="stroke_color" format="color" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="button_style">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="button_icon_size" format="dimension" />
+        <attr name="button_icon_stroke_width" format="dimension" />
+        <attr name="button_icon_color" format="color" />
+        <attr name="expand_time" format="integer" />
+        <attr name="expand" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SwitcherView">
+        <attr name="switcherTextColor" format="color" />
+        <attr name="switcherRollingTime" format="integer" />
+        <attr name="switcherTextSize" format="dimension" />
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+8"))
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        ndk {
+            // 此处必须设置为 armeabi ，TBS 文件浏览不支持其他类型
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
+
+    }
+
+        flavorDimensions "app_flag"
+        productFlavors {
+            //微议标准版
+            weiyi_pro {
+                dimension "app_flag"
+                applicationId "com.melon.app1"
+
+                versionCode 1110
+                versionName "1.1.1.0"
+                buildConfigField "String", "HOST", "\"https://www.baidu.com\""
+            }
+        }
+        buildTypes {
+
+            debug {
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                //混淆
+                minifyEnabled false
+                buildConfigField "String", "HOST", "\"https://test.baidu.com\""
+            }
+
+            release {
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                //混淆
+                minifyEnabled true
+                zipAlignEnabled true
+                // 移除无用的resource文件
+                shrinkResources true
+                buildConfigField "String", "HOST", "\"https://www.baidu.com\""
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                debuggable true
+
+                //apk命名
+                android.applicationVariants.all { variant ->
+                    variant.outputs.all {
+
+                        def buildName
+                        variant.productFlavors.each { product ->
+                            buildName = product.name
+                        }
+                        outputFileName = "${buildName}-${variant.versionCode}-${variant.versionName}-${variant.buildType.name}-${releaseTime()}.apk"
+
+                    }
+                }
+
+            }
+        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

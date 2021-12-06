@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="gudieview_width">6dp</dimen>
+    <dimen name="gudieview_heigh">6dp</dimen>
+    <dimen name="picker_view_height">160dp</dimen>
+    <dimen name="date_unit_text_size">18sp</dimen>
+
+    <!-- font -->
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_normal2">16sp</dimen>
+    <dimen name="font_normal3">20sp</dimen>
+    <dimen name="font_large">24sp</dimen>
+    <dimen name="font_line_space">5dp</dimen>
+    <!--text_size-->
+    <dimen name="font_text_10sp">10sp</dimen>
+    <dimen name="font_text_12sp">12sp</dimen>
+    <dimen name="font_text_13sp">13sp</dimen>
+    <dimen name="font_text_14sp">14sp</dimen>
+    <dimen name="font_text_15sp">15sp</dimen>
+    <dimen name="font_text_16sp">16sp</dimen>
+    <dimen name="font_text_17sp">17sp</dimen>
+    <dimen name="font_text_18sp">18sp</dimen>
+    <dimen name="font_text_20sp">20sp</dimen>
+
+
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+</resources>
